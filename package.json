@@ -1,0 +1,23 @@
+{
+  "name": "mm_vue",
+  "version": "1.0.0",
+  "description": "这是超级美眉Vue前端框架，可以快速构建网站前端",
+  "author": "邱文武",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.11",
+    "jquery": "^3.3.1",
+    "nuxt": "^2.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
