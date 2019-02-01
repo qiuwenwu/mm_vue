@@ -2,16 +2,16 @@ import $ from 'jquery';
 import Vue from 'vue';
 
 let mm = {};
-mm.host = "",
 	mm.install = function(Vue, options) {
+		var host = "";
 		if (options) {
-			this.host = options.host;
+			host = options.host;
 		}
-		Vue.prototype.getApi = function(url, fun) {
-			return $.http.get(this.host + url, fun);
+		Vue.prototype.getApi = function(url, fun, headers) {
+			return $.http.get(host + url, fun, headers);
 		};
-		Vue.prototype.postApi = function(url, param, fun) {
-			return $.http.post(this.host + url, param, fun);
+		Vue.prototype.postApi = function(url, param, fun, headers) {
+			return $.http.post(host + url, param, fun, headers);
 		};
 	};
 export default mm;

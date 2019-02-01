@@ -16,7 +16,11 @@ export default {
   components: {
     page_head,
 		page_foot
-  }
+  },
+	created(){
+		var ret = this.getApi('/lang/chinese.json');
+		console.log(this.getApi);
+	}
 }
 </script>
 
