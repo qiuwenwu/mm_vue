@@ -38,10 +38,7 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
-		'@/plugins/mm_obj',
-		'@/plugins/mm_arr',
-		'@/plugins/mm_str',
-		'@/plugins/mm_time',
+		'@/plugins/mm_sdk'
 		],
 
   /*

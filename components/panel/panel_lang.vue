@@ -1,9 +1,7 @@
 <template>
-	<ul class="list_comment">
-		<li>
-			<div></div>
-		</li>
-	</ul>
+	<dl class="panel_lang"><dt></dt>
+		<dd></dd>
+	</dl>
 </template>
 
 <script>

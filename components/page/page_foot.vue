@@ -2,9 +2,17 @@
 	<div class="page_foot"></div>
 </template>
 
-<script>import page_head from '~/components/page_head.vue';
+<script>
+	import nav_foot from '~/components/nav/nav_foot.vue';
 
-export default {components: {},data(){},computed: {}}</script>
+	export default {
+		components: {
+			nav_foot
+		},
+		data() { return {}; },
+		computed: {}
+	}
+</script>
 
 <style>
 </style>

@@ -1,9 +1,18 @@
 <template>
-	<el-menu class="nav_type"><el-submenu><el-menu-item></el-menu-item></el-submenu></el-menu>
+	<el-menu class="nav_type">
+		<el-submenu>
+			<el-menu-item></el-menu-item>
+		</el-submenu>
+	</el-menu>
 </template>
 
 <script>
-export default {components: {},data(){},computed: {}}</script>
+	export default {
+		components: {},
+		data() { return {}; },
+		computed: {}
+	}
+</script>
 
 <style>
 </style>

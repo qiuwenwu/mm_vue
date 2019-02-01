@@ -1239,22 +1239,21 @@ import jquery from 'jquery';
     /// 计算时间差——时间间隔
     /// startTime：开始时间
     /// endTime：结束时间
-    /// timmsg：计算时间类型（day天、hours小时、minutes分钟）
-    $.interval = function (startTime, endTime, timmsg) {
+    /// time_unit：时间单位（day天、hours小时、minutes分钟）
+    $.interval = function (startTime, endTime, time_unit) {
         var stime = Date.parse(new Date(startTime));
         var etime = Date.parse(new Date(endTime));
         var usedTime = etime - stime;  //两个时间戳相差的毫秒数
-        if (timmsg == "day") {
+        if (time_unit == "day") {
             return Math.floor(usedTime / (24 * 3600 * 1000));
         }
         else {
             //计算出小时数
             var leave1 = usedTime % (24 * 3600 * 1000);    //计算天数后剩余的毫秒数
-            if (timmsg == "hours") {
+            if (time_unit == "hours") {
                 return Math.floor(leave1 / (3600 * 1000));
             }
             else {
-                //(timmsg == "minutes") 
                 //计算相差分钟数
                 var leave2 = leave1 % (3600 * 1000);        //计算小时数后剩余的毫秒数  
                 return Math.floor(leave2 / (60 * 1000));

@@ -2,18 +2,19 @@
   <div id="home_channel" class="page_home">
 		<page_head />
 		<div class="main">
-			<Logo />
 		</div>
 		<page_foot v-once/>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
+import page_head from '~/components/page/page_head.vue';
+import page_foot from '~/components/page/page_foot.vue';
 
 export default {
   components: {
-    Logo
+		page_head,
+    page_foot
   }
 }
 </script>
