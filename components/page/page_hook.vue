@@ -3,11 +3,28 @@
 </template>
 
 <script>
-	import page_head from '~/components/page_head.vue';
+	import $ from 'jquery';
+	
 	export default {
 		components: {},
-		data() { return {}; },
-		computed: {}
+		props:{
+			
+		},
+		data() {
+			return {
+
+			};
+		},
+		computed: {},
+		created() {
+			$.cookie('test', '123');
+			var val = $.cookie('test');
+			console.log(val);
+			var v = $.http.get('/plug/test.js', function(ret){
+				console.log('特殊');
+				console.log(ret);
+			});
+		}
 	}
 </script>
 
