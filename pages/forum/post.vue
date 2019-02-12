@@ -1,24 +1,17 @@
 <template>
-  <div id="forum_post" class="page_forum">
-		<page_head />
-		<div class="main">
+  <main id="forum_post" class="page_forum">
+		<div class="warp">
 		</div>
-		<page_foot v-once/>
-  </div>
+  </main>
 </template>
 
 <script>
-import page_head from '~/components/page/page_head.vue';
-import page_foot from '~/components/page/page_foot.vue';
-
 export default {
   components: {
-		page_head,
-    page_foot
+		
   }
 }
 </script>
 
 <style>
-
 </style>

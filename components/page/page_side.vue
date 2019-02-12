@@ -3,9 +3,11 @@
 </template>
 
 <script>
-	import page_head from '~/components/page_head.vue';
+	import nav_side from '~/components/nav_side.vue';
 	export default {
-		components: {},
+		components: {
+			nav_side
+		},
 		data() { return {}; },
 		computed: {}
 	}

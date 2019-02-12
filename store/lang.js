@@ -9,7 +9,7 @@ export const state = () => ({
 		"nav_help": "技术支持",
 		"nav_about": "关于我们",
 		"nav_news": "新闻动态",
-		"nav_register": "注册",
+		"nav_sign_up": "注册",
 		"nav_sign_in": "登录",
 		"nav_panel": "控制面板",
 		"nav_wallet": "硬件钱包",
@@ -20,7 +20,7 @@ export const state = () => ({
 		"title_retrieve_account": "找回密码",
 		"title_account": "账户",
 		"title_password": "密码",
-		"code": "验证码",
+		"vcode": "验证码",
 		"form_phone": "手机号码",
 		"form_phone_tip": "不是国内需要添加区号",
 		"form_email": "邮箱",
@@ -91,12 +91,30 @@ export const state = () => ({
 	}
 });
 
+// commit 设置本地参数
 export const mutations = {
 	/// 设置语言字典
 	/// state: 状态
-	/// value: 语言字典模型
-	set(state, value) {
-		state.now = value.now;
-		$.eachObj(state.dict, value.dict);
+	/// data: 传递的参数, 语言字典模型
+	set(state, data) {
+		state.now = data.now;
+		$.obj.push(state.dict, data.dict);
+		$.cookie('lang', data.now, 7200);
+	},
+}
+
+// dispatch 从远程获取参数
+export const actions = {
+	set(store, lang) {
+		var _this = this;
+		$.http.get('/lang/' + lang + '.json', function(data, status) {
+			if (data) {
+				
+				store.commit('set', {
+					now: lang,
+					dict: data
+				});
+			}
+		});
 	}
 }

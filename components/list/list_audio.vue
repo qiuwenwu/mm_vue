@@ -1,15 +1,19 @@
 <template>
 	<ul class="list_audio">
-		<li>
+		<li v-for="(o, index) in list" :key="index">
 			<div></div>
 		</li>
 	</ul>
 </template>
 
 <script>
+	import mixin from '~/mixins/list';
 	export default {
+		mixins: [mixin],
 		components: {},
-		data() { return {}; },
+		data() {
+			return {};
+		},
 		computed: {}
 	}
 </script>

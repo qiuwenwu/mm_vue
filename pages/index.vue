@@ -1,27 +1,17 @@
 <template>
-  <div id="home_index" class="page_home">
-		<page_head />
-		<div class="main">
-			123123
+	<div id="home_index" class="main page_home">
+		<div class="warp">
 		</div>
-		<page_foot v-once/>
-  </div>
+	</div>
 </template>
 
 <script>
-import page_head from '~/components/page/page_head.vue';
-import page_foot from '~/components/page/page_foot.vue';
-
-export default {
-  components: {
-    page_head,
-		page_foot
-  },
-	created(){
-		var ret = this.getApi('/lang/chinese.json');
-		console.log(this.getApi);
+	export default {
+		components: {
+		},
+		created() {
+		}
 	}
-}
 </script>
 
 <style>

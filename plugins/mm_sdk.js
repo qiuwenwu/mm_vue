@@ -383,7 +383,7 @@ Array.prototype.sortBy = function(method, key) {
 		/// 遍历赋值到对象
 		/// objA: 被赋值对象
 		/// objB: 来源对象
-		eachPush: function(objA, objB, bl) {
+		push: function(objA, objB, bl) {
 			if (!objA || !objB) {
 				return objA;
 			}
@@ -509,7 +509,7 @@ Array.prototype.sortBy = function(method, key) {
 			$.ajax({
 				type: 'GET',
 				url: url,
-				async: fun == true,
+				async: fun != null,
 				beforeSend: function(xhr) {
 					if (headers) {
 						for (var k in headers) {
@@ -538,7 +538,7 @@ Array.prototype.sortBy = function(method, key) {
 			$.ajax({
 				type: 'POST',
 				url: url,
-				async: fun == true,
+				async: fun != null,
 				data: JSON.stringify(param),
 				contentType: "application/json;charset=utf-8;",
 				dataType: "json",
@@ -624,3 +624,5 @@ Array.prototype.sortBy = function(method, key) {
 		}
 	};
 })(jquery);
+
+export default jquery;

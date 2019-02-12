@@ -1,10 +1,8 @@
 <template>
-  <div id="home_article" class="page_home">
-		<page_head />
-		<div class="main">
+  <main id="home_article" class="page_home">
+		<div class="warp">
 		</div>
-		<page_foot v-once/>
-  </div>
+  </main>
 </template>
 
 <script>

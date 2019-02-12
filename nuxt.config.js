@@ -38,6 +38,7 @@ module.exports = {
   plugins: [
     '@/plugins/element-ui',
 		'@/plugins/mm_sdk',
+		'@/plugins/mm_ui',
 		'@/plugins/commom'
 		],
 

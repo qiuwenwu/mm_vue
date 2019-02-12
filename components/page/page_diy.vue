@@ -1,11 +1,21 @@
 <template>
-	<div class="page_diy"></div>
+	<div class="page_diy" v-html="html"></div>
 </template>
 
 <script>
 	export default {
 		components: {},
-		data() { return {}; },
+		props: {
+			name: {
+				type: String,
+				required: true
+			}
+		},
+		data() {
+			return {
+				html: ""
+			};
+		},
 		computed: {}
 	}
 </script>

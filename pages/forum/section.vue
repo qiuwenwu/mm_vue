@@ -1,10 +1,8 @@
 <template>
-  <div id="forum_section" class="page_forum">
-		<page_head />
-		<div class="main">
+  <main id="forum_section" class="page_forum">
+		<div class="warp">
 		</div>
-		<page_foot v-once/>
-  </div>
+  </main>
 </template>
 
 <script>
