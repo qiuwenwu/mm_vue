@@ -36,4 +36,8 @@
 	.nav_main>.el-menu-item.is-active {
 		border-bottom: none;
 	}
+	
+	.nav_main>.el-menu-item.is-active{
+		color: #999 !important;
+	}
 </style>

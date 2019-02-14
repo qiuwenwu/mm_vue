@@ -1,6 +1,6 @@
 <template>
 	<figure class="logo">
-		<img src="/img/logo.png" />
+		<router-link to="/"><img src="/img/logo.png" /></router-link>
 	</figure>
 </template>
 

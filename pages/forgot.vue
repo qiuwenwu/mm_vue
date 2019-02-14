@@ -1,7 +1,7 @@
 <template>
-	<div id="root_signUp" class="main page_root">
+	<div id="root_forgot" class="main page_root">
 		<div class="form card modal">
-			<h2 style="text-align: center;">{{ $lang('title_register') }}</h2>
+			<h2 style="text-align: center;">{{ $lang('title_retrieve_account') }}</h2>
 			<el-form label-position="right" label-width="5rem">
 			<el-form-item :label="$lang('form_account')">
 				<el-input type="text" v-model="form.account" class="form-control" :placeholder="$lang('form_account_tip')"></el-input>
@@ -17,7 +17,7 @@
 					<el-button slot="append">{{ $lang('btn_send_code') }}</el-button>
 				</el-input>
 			</el-form-item>
-				<el-button class="fm" @click="submit()" type="primary">{{ $lang('btn_register') }}</el-button>
+				<el-button class="fm" @click="submit()" type="primary">{{ $lang('btn_update_password') }}</el-button>
 			</el-form>
 		</div>
 	</div>
@@ -25,18 +25,6 @@
 
 <script>
 	export default {
-		data() {
-			return {
-				// 登录信息
-				form:{
-					account: "17608170325",
-					password: "root",
-					code: ""
-				},
-				codeImg: "http://ddns.kylinhash.com:65523/captcha/login_code.jpg",
-				message: 'Hello Vue!'
-			}
-		},
 		computed:{
 			code_tip(){
 				if(!this.form.account){
@@ -52,13 +40,22 @@
 				}
 			}
 		},
-		methods:{
-			submit(){
-				
+		data() {
+			return {
+				// 登录信息
+				form:{
+					account: "17608170325",
+					password: "root",
+					password_confirm: "",
+					code: ""
+				},
+				codeImg: "http://ddns.kylinhash.com:65523/captcha/login_code.jpg",
+				message: 'Hello Vue!'
 			}
 		}
 	}
 </script>
 
 <style>
+
 </style>

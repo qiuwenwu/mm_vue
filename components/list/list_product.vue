@@ -1,5 +1,5 @@
 <template>
-	<ul class="list_image">
+	<ul class="list_goods">
 		<li v-for="(o, index) in list" :key="index">
 			<div></div>
 		</li>
@@ -11,8 +11,6 @@
 	export default {
 		mixins: [mixin],
 		components: {},
-		props:{
-		},
 		data() { return {}; },
 		computed: {}
 	}

@@ -5,7 +5,9 @@ export const state = () => ({
 		username: "",
 		nickName: "",
 		email: "",
-		phone: "15817188815"
+		phone: "15817188815",
+		gid: 1, //用户组ID
+		aid: 0 //管理组ID
 	},
 	account:{
 		
@@ -14,12 +16,14 @@ export const state = () => ({
 
 // commit 设置本地参数
 export const mutations = {
-	/// 设置语言字典
+	/// 设置用户信息
 	/// state: 状态
-	/// data: 传递的参数, 语言字典模型
+	/// data: 传递的参数, 用户信息模型
 	set(state, data) {
-// 		state.name = data;
-// 		$.cookie('style', data, 7200);
+		$.obj.push(state.info, data);
+	},
+	sing_out(state, data){
+		$.obj.clear(state.info);
 	}
 }
 

@@ -164,6 +164,18 @@ Date.prototype.interval = function(endTime, time_unit) {
 	return 0;
 };
 
+/// 时间添加天数
+Date.prototype.addDays = function (days){ 
+	this.setDate(this.getDate() + days); 
+	return this;
+}
+
+ /// 时间添加秒数
+ Date.prototype.addSeconds = function (seconds){ 
+	this.setSeconds(this.getSeconds()() + seconds); 
+	return this;
+ }
+ 
 /* == 字符串拓展函数 == */
 /// 验证开头字符串
 /// 返回：验证成功返回true，失败返回false
@@ -221,21 +233,31 @@ String.prototype.toTime = function() {
 /// 获取值
 /// key：比较键名
 /// value：比较值
-/// name：获取指定属性值,为空则返回对象
 /// 返回：返回对象或属性值
-Array.prototype.get = function(key, value, name) {
-	var val;
+Array.prototype.get = function(key, value) {
+	var obj;
 	var arr = this;
 	for (var i = 0; i < arr.length; i++) {
 		var o = arr[i];
 		if (o[key] === value) {
-			if (name) {
-				val = o[name];
-			} else {
-				val = o;
-			}
+			obj = o;
 			break;
 		}
+	}
+	return obj;
+};
+
+/// 获取值
+/// key：比较键名
+/// value：比较值
+/// name：获取指定属性值,为空则返回对象
+/// 返回：返回对象或属性值
+Array.prototype.getVal = function(key, value, name) {
+	var val;
+	var obj = this.get(key, value);
+	if(obj != null)
+	{
+		val = obj[name];
 	}
 	return val;
 };
@@ -623,6 +645,24 @@ Array.prototype.sortBy = function(method, key) {
 			return $.cookies.get(key);
 		}
 	};
+	
+	/* 切换语言设置 */
+	$.lang = {
+		now: "",
+		dict: {}
+	};
+	$.lang.get = function(key)
+	{
+		return $.lang.dict[key];
+	};
+	$.lang.set = function(key, value)
+	{
+		$.lang.dict[key] = value;
+	};
+	$.lang.toggle = function(name)
+	{
+		$.lang.now = name;
+	}
 })(jquery);
 
 export default jquery;

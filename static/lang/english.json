@@ -83,5 +83,15 @@
 	"tab_maintenance_fee_order": "Maintenance fee order",
 	"tab_shopping_order": "Shopping order",
 	"tab_output_address": "Output address",
-	"tab_message_setting": "Message setting"
+	"tab_message_setting": "Message setting",
+	"product_description": "Description",
+	"product_reminder": "Reminder",
+	"product_buy_way": "Payment method",
+	"product_contact": "Contact",
+	"product_service": "After sales service",
+	"product_help": "Technical support",
+	"news_hot": "Hot news",
+	"news_new": "Latest News",
+	"news_related": "Related news",
+	"add_shopping_cart": "Add shopping cart"
 }

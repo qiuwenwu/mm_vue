@@ -7,10 +7,6 @@
 	</div>
 </template>
 
-<style>
-
-</style>
-
 <script>
 	import page_top from '~/components/page/page_top.vue';
 	import page_head from '~/components/page/page_head.vue';
@@ -46,3 +42,20 @@
 		}
 	}
 </script>
+
+<style>
+	.main { min-height: calc(100vh - 22rem); overflow: hidden; position: relative; }
+	.main>.form h2 { margin-bottom: 1.5rem; }
+	.form_checkbox { margin-left: 1.5rem; }
+	.form { padding: 3rem 1rem; }
+	.main>.form { position:absolute; }
+	.main>.form button { width: 25%; display: block; margin: 0 auto; }
+	.price { color: #409eff; }
+	
+	.page_mall, .page_home { background: #f9faff; }
+	.el-breadcrumb { padding: 1.5rem 0; }
+	
+	.form-control { max-width: 13.5rem; }
+	.form_tip { position: absolute; top:50%; transform: translateY(-50%); left: 15rem; }
+	.el-input.is-disabled .el-input__inner { color: #333; }
+</style>

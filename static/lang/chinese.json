@@ -83,5 +83,15 @@
 	"tab_maintenance_fee_order": "维护费订单",
 	"tab_shopping_order": "产品购买订单",
 	"tab_output_address": "收币地址",
-	"tab_message_setting": "提醒设置"
+	"tab_message_setting": "提醒设置",
+	"product_description": "产品描述",
+	"product_reminder": "温馨提示",
+	"product_buy_way": "付款方式",
+	"product_contact": "联系方式",
+	"product_service": "售后服务",
+	"product_help": "技术支持",
+	"news_hot": "热点新闻",
+	"news_new": "最新资讯",
+	"news_related": "相关新闻",
+	"add_shopping_cart": "加入购物车"
 }

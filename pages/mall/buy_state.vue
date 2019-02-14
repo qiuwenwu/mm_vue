@@ -1,17 +1,15 @@
 <template>
-  <main id="home_channel" class="page_home">
+	<div id="mall_buy_state" class="main page_mall">
 		<div class="warp">
+			购买状态
 		</div>
-  </main>
+	</div>
 </template>
 
 <script>
 export default {
-  components: {
-  }
 }
 </script>
 
 <style>
-
 </style>

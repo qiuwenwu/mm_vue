@@ -1,15 +1,11 @@
 <template>
 	<div class="panel_lang">
-		<el-dropdown @command="setLang">
-			<div class="el-dropdown-link" v-if="langs.now == 'chinese'">
-				<img src="/img/chinese.svg" /><span>简体中文</span><i class="el-icon-caret-bottom"></i>
+		<el-dropdown @command="set">
+			<div class="el-dropdown-link">
+				<img :src="obj.img" /><span>{{ obj.title }}</span><i class="el-icon-caret-bottom"></i>
 			</div>
-			<div class="el-dropdown-link" v-else>
-				<img src="/img/english.svg" /><span>English</span><i class="el-icon-caret-bottom"></i>
-			</div>
-			<el-dropdown-menu slot="dropdown">
-				<el-dropdown-item index="1" command="chinese"><img src="/img/chinese.svg" /><span>简体中文</span></el-dropdown-item>
-				<el-dropdown-item index="2" command="english"><img src="/img/english.svg" /><span>English</span></a></el-dropdown-item>
+			<el-dropdown-menu class="panel_lang_menu" slot="dropdown">
+					<el-dropdown-item v-for="(o, index) in list" :key="index" :index="o.name" :command="o.name"><img :src="o.img" /><span>{{ o.title }}</span></el-dropdown-item>
 			</el-dropdown-menu>
 		</el-dropdown>
 	</div>
@@ -18,16 +14,50 @@
 <script>
 	export default {
 		components: {},
-		data() { return {
-			langs: this.$store.state.lang
-		}; },
-		computed: {},
-		methods:{
-			set(lang){
+		data() {
+			return {
+				lang: this.$store.state.lang,
+				list: [{
+						title: "简体中文",
+						name: "chinese",
+						img: "/img/chinese.svg"
+					},
+					{
+						title: "English",
+						name: "english",
+						img: "/img/english.svg"
+					}
+				]
+			};
+		},
+		computed: {
+			obj() {
+				var key = this.lang.now;
+				return this.list.get('name', key);
+			}
+		},
+		methods: {
+			set(lang) {
+				// 初始化语言
+				this.$store.dispatch('lang/set', lang);
 			}
 		}
 	}
 </script>
 
 <style>
+	.panel_lang {
+		position: relative;
+		z-index: 2;
+		margin-left: 1.5rem;
+		margin-top: 1.1rem;
+	}
+	.panel_lang .el-dropdown-link {
+		color: #fff;
+	}
+	.panel_lang .el-dropdown-link, .panel_lang_menu .el-dropdown-menu__item { position: relative; }
+	.panel_lang img { position: absolute; top: 50%; transform: translateY(-50%); }
+	.panel_lang img ~ span { margin-left: 1.75rem; }
+	.panel_lang_menu img { position: absolute; top: 50%; transform: translateY(-50%); }
+	.panel_lang_menu img ~ span { margin-left: 1.75rem; }
 </style>

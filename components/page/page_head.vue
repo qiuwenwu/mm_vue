@@ -3,9 +3,9 @@
 		<div class="warp">
 			<page_hook name="page_head_top"/>
 			<logo class="fl" />
+			<nav_main class="fl" :list="nav" />
 			<panel_lang class="fr" />
 			<panel_user class="fr" />
-			<nav_main />
 			<page_hook name="page_head_bottom" />
 		</div>
 	</header>
@@ -17,7 +17,6 @@
 	import panel_user from '~/components/panel/panel_user.vue';
 	import logo from '~/components/logo';
 	import nav_main from '~/components/nav/nav_main.vue';
-	import nav_quick from '~/components/nav/nav_quick.vue';
 
 	export default {
 		components: {
@@ -25,10 +24,11 @@
 			panel_lang,
 			panel_user,
 			nav_main,
-			nav_quick,
 			logo
 		},
-		data() { return {}; },
+		data() { return {
+			nav: this.$store.state.web.nav_main,
+		}; },
 		computed: {}
 	}
 </script>
@@ -37,5 +37,7 @@
 	.page_head {
 		background: #2E2E2E;
 		color: #fff;
+		min-height: 3.75rem;
+		text-align: right;
 	}
 </style>

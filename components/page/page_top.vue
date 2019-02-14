@@ -2,9 +2,9 @@
 	<div class="page_top">
 		<div class="warp">
 			<page_hook name="page_top" />
-			<list_notice class="fl" :list="list_notice_list" />
+			<list_notice class="fl" :list="notice" />
 			<panel_style class="fr" />
-			<nav_top class="fr" :list="nav_top_list" />
+			<nav_top class="fr" :list="nav" />
 		</div>
 	</div>
 </template>
@@ -23,8 +23,8 @@
 			list_notice
 		},
 		data() { return {
-			nav_top_list:[],
-			list_notice_list: [{
+			nav: this.$store.state.web.nav_top,
+			notice: [{
 					id: 1,
 					title: '春节活动规则说明', // 标题
 					url: '/home/article?aid=11', // 跳转链接
@@ -46,5 +46,5 @@
 </script>
 
 <style>
-	.page_top { height: 2.5rem; line-height: 2.5rem; background: #262a37; color: #999; }
+	.page_top { height: 2.5rem; line-height: 2.5rem; background: #262a37; color: #999; overflow: hidden; }
 </style>
