@@ -19,7 +19,7 @@ export default {
   },
   data(){
 	return {
-		lang: this.$store.state.lang.dict
+		
 	}
   }
 }

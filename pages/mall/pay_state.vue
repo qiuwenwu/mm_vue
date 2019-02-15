@@ -1,13 +1,14 @@
 <template>
-	<div id="mall_buy_state" class="main page_mall">
+	<div id="mall_pay_state" class="main page_mall">
 		<div class="warp">
-			购买状态
+			支付状态
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
+	
 }
 </script>
 

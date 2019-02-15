@@ -45,7 +45,7 @@ button:focus{ outline: none; }
 /* 间距 */
 .ma {margin:1rem !important;}
 .mb {margin-bottom:1rem !important;}
-.mc {margin-left:auto !important; margin-right:auto !important;}
+.mc {margin-left:auto !important; margin-right:auto !important; display: block; }
 .ml {margin-left:1rem !important;}
 .mlr {margin-left:1rem; margin-right:1rem !important;}
 .mn {margin:0 !important;}
@@ -127,7 +127,7 @@ button:focus{ outline: none; }
 .box { position:absolute; z-index:3; }
 .mask { position:fixed; z-index:5; }
 .modal {position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); border-radius:0.25rem; width:calc(100% - 2rem); max-width:30rem; z-index:6;}
-.warp { width: 100%; min-width: 64rem; max-width: 75rem; margin: 0 auto; }
+.warp { width: 100%; min-width: 64rem; max-width: 75rem; margin: 0 auto; position: relative; }
 .warp:before, .warp:after{ display: block; content: ""; clear: both; float: none; }
 .card { background: #fff; border-top: 1px solid rgba(0,0,0,.04); border-radius: .25rem; box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04); }
 
@@ -153,6 +153,7 @@ h6,.h6 {font-size: 0.875rem;}
 .bg_danger { background: #F56C6C; color: #fff; }
 .bg_info { background: #909399; color: #fff; }
 
+
 /* 字体颜色 */
 .font_black { color: #333; }
 .font_gray { color: #666; }
@@ -171,6 +172,10 @@ h4,.h4,
 h5,.h5,
 h6,.h6 { color: #333; }
 
+/* 常规布局 */
+dt { margin-top: 1rem; margin-bottom: 0.25rem; color: #333; font-weight: 600; }
+dd { padding-left: 2rem; padding-bottom: 1rem;}
 
 /* 常用 */
 .unit { font-style: normal; }
+

@@ -6,10 +6,10 @@
 					<span>{{ info.nickName }}</span><i class="el-icon-caret-bottom"></i>
 				</div>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item index="1" command="/user/panel"><span>{{ $lang('nav_user_panel') }}</span></el-dropdown-item>
+					<el-dropdown-item index="1" command="/user/panel"><span>{{ $lang('nav_asset_manage') }}</span></el-dropdown-item>
 					<el-dropdown-item index="2" command="/user/order"><span>{{ $lang('nav_user_order') }}</span></el-dropdown-item>
-					<el-dropdown-item index="3" command="/user/info"><span>{{ $lang('nav_info') }}</span></el-dropdown-item>
-					<el-dropdown-item index="4" command="signout"><span>{{ $lang('btn_sign_out') }}</span></el-dropdown-item>
+					<el-dropdown-item index="3" command="/user/info"><span>{{ $lang('nav_user_info') }}</span></el-dropdown-item>
+					<el-dropdown-item index="4" command="signout" class="center" divided><span>{{ $lang('btn_sign_out') }}</span></el-dropdown-item>
 				</el-dropdown-menu>
 			</el-dropdown>
 		</div>
@@ -63,7 +63,6 @@
 	.nav_user i {
 		color: #fff;
 	}
-
 	.user_sign a {
 		color: inherit;
 		font-size: 14px;

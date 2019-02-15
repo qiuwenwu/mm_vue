@@ -2,7 +2,7 @@
 	<div class="nav_foot">
 		<h4 v-if="label">{{ label }}</h4>
 		<el-menu :router="true">
-			<el-menu-item v-for="(o, index) in list" :key="index" :index="o.name" :route="o.url">{{ o.title }}</el-menu-item>
+			<el-menu-item v-for="(o, index) in list" :key="index" :index="o.name" :route="o.url"><span v-if="o.icon" v-html="o.icon"></span>{{ o.title }}</el-menu-item>
 		</el-menu>
 	</div>
 </template>

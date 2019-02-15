@@ -14,7 +14,7 @@
 					{{ $lang('buy_now') }} | {{ $lang('unit') }} {{ o[vm.price] }}
 				</router-link>
 				<div class="calculation_version"><span>{{ o[vm.version] }}</span></div>
-				<div class="calculation_tag"><img src="/img/hot.png" /></div>
+				<div class="calculation_tag" v-if="o.hot"><img src="/img/hot.png" /></div>
 			</div>
 		</li>
 		</ul>
@@ -37,7 +37,8 @@
 						solded: "solded",
 						count: "count",
 						price: "price",
-						version: "version"
+						version: "version",
+						hot: 0
 					}
 				}
 			}

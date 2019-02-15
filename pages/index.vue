@@ -1,7 +1,7 @@
 <template>
 	<div id="root_index" class="main page_root">
 		<div class="warp">
-			<div class="barrage center modal">
+			<div class="barrage center">
 				<h1 class="title">
 					digBig
 				</h1>
@@ -25,7 +25,7 @@
 </script>
 
 <style>
-.barrage { margin-top: -6rem; }
+.barrage { margin-top: 9rem; }
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

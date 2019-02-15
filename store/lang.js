@@ -98,7 +98,7 @@ export const state = () => ({
 			"news_new": "最新资讯",
 			"news_related": "相关新闻",
 			"add_shopping_cart": "加入购物车",
-			// 新加入
+			"order_info": "订单信息",
 			"order_currency": "币种",
 			"order_miner": "机型",
 			"order_computing_power": "算力",
@@ -108,11 +108,13 @@ export const state = () => ({
 			"order_usage_fee": "使用费",
 			"order_mining_days": "挖矿天数",
 			"please_choose": "请选择",
-			"order_management_fee": "维护费",
+			"order_manage_fee": "维护费",
+			"order_manage_fee_tip": "( 价格 x 算力 x 挖矿天数 )",
 			"pay_way": "支付方式",
-			"order_currency": "币种",
-			"order_currency": "币种",
-			"order_currency": "币种",
+			"pay_way_tip": "支持支付宝、微信、网银支付",
+			"order_count": "总计",
+			"read_and_agree": "已阅读并同意",
+			"user_protocol": "《用户服务协议》"
 		}
 });
 

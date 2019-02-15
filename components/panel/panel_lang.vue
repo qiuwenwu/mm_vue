@@ -5,7 +5,7 @@
 				<img :src="obj.img" /><span>{{ obj.title }}</span><i class="el-icon-caret-bottom"></i>
 			</div>
 			<el-dropdown-menu class="panel_lang_menu" slot="dropdown">
-					<el-dropdown-item v-for="(o, index) in list" :key="index" :index="o.name" :command="o.name"><img :src="o.img" /><span>{{ o.title }}</span></el-dropdown-item>
+				<el-dropdown-item v-for="(o, index) in list" :key="index" :index="o.name" :command="o.name"><img :src="o.img" /><span>{{ o.title }}</span></el-dropdown-item>
 			</el-dropdown-menu>
 		</el-dropdown>
 	</div>

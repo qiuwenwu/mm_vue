@@ -27,7 +27,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 1,
 			},
 			{
 				id: 2,
@@ -37,7 +38,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 0
 			},
 			{
 				id: 3,
@@ -47,7 +49,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 1
 			},
 			{
 				id: 4,
@@ -57,7 +60,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 0
 			},
 			{
 				id: 5,
@@ -67,7 +71,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 0
 			},
 			{
 				id: 6,
@@ -77,7 +82,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 0
 			},
 			{
 				id: 7,
@@ -87,7 +93,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 0
 			},
 			{
 				id: 8,
@@ -97,7 +104,8 @@ export default {
 				solded: 80,
 				count: 100,
 				price: 0.0397,
-				version: "- 蚂蚁矿机15系列 -"
+				version: "- 蚂蚁矿机15系列 -",
+				hot: 1
 			}
 		]
 	}

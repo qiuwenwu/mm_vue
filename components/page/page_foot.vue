@@ -43,7 +43,9 @@
 		},
 		data() { return {
 			nav: this.$store.state.web.nav_foot,
-		}; },
+			keyword: ""
+		}
+		},
 		computed: {}
 	}
 </script>

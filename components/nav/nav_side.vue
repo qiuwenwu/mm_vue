@@ -1,9 +1,10 @@
 <template>
-	<el-menu class="nav_side">
-		<el-submenu index="1">
-			<el-menu-item index="/nav1">导航1</el-menu-item>
-		</el-submenu>
-	</el-menu>
+	<div class="nav_side">
+		<h4 v-if="label">{{ label }}</h4>
+		<el-menu :router="true">
+			<el-menu-item v-for="(o, index) in list" :key="index" :index="o.name" :route="o.url"><span v-if="o.icon" v-html="o.icon"></span>{{ o.title }}</el-menu-item>
+		</el-menu>
+	</div>
 </template>
 
 <script>

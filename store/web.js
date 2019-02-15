@@ -95,7 +95,32 @@ export const state = () => ({
 	],
 	nav_path: [],
 	nav_quick: [],
-	nav_side: [],
+	nav_side: [
+		{
+			id: 1,
+			title: '资产管理', // 标题
+			name: 'panel', // 名称
+			url: '/user/panel', // 跳转链接
+		},
+		{
+			id: 2,
+			title: '我的订单', // 标题
+			name: 'News', // 名称
+			url: '/home/news_list?cid=2', // 跳转链接
+		},
+		{
+			id: 3,
+			title: '个人中心', // 标题
+			name: 'About_us', // 名称
+			url: '/about', // 跳转链接
+		},
+		{
+			id: 4,
+			title: '提醒设置', // 标题
+			name: 'News', // 名称
+			url: '/home/news_list?cid=2', // 跳转链接
+		}
+	],
 	nav_tag: [],
 	nav_type: [],
 	nav_top: []
