@@ -46,16 +46,13 @@ export default {
 			type: Object,
 			default: function() {
 				return {
-					id: 'id', // 当前ID
-					fid: 'fid', // 上级ID
-					icon: 'icon', // 图标
-					title: 'title', // 标题
-					desc: 'desc', // 描述
-					url: 'url', // 链接
-					mode: 'mode', // 方式
-					name: 'name', // 名称
-					value: 'value', // 值
-					tip: 'tip', // 提示
+					icon: 'icon', //图标
+					title: 'title', //标题
+					desc: 'desc', //描述
+					url: 'url', //链接
+					mode: 'mode', //方式
+					name: 'name', //名称
+					value: 'value' //值
 				}
 			}
 		}

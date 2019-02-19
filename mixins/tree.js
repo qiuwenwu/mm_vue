@@ -48,24 +48,14 @@ export default {
 				return {
 					id: 'id', // 当前ID
 					fid: 'fid', // 上级ID
-					img: 'img', // 图片
 					icon: 'icon', // 图标
 					title: 'title', // 标题
 					desc: 'desc', // 描述
-					content: 'content', // 内容
-					time: 'time', // 时间
 					url: 'url', // 链接
 					mode: 'mode', // 方式
-					source: 'source', // 来源
-					source_url: 'source_url', // 来源地址
 					name: 'name', // 名称
 					value: 'value', // 值
 					tip: 'tip', // 提示
-					hot: 'hot', // 热度
-					price_old: 'price_old', // 原价
-					price: 'price', // 价格
-					total: 'total', // 总价
-					zan: 'zan' // 点赞数
 				}
 			}
 		}

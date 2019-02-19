@@ -2,7 +2,7 @@
 	<div id="user_info" class="main page_user">
 		<div class="warp">
 			<aside>
-				<nav_side :list="nav_side" v-once/>
+				<nav_side :list="nav_side" v-once />
 			</aside>
 			<article>
 				<div class="row">
@@ -25,12 +25,10 @@
 </template>
 
 <script>
-
 	import nav_side from '~/components/nav/nav_side.vue';
 
 	export default {
 		components: {
-			
 			nav_side
 		},
 		data() {

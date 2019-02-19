@@ -27,7 +27,7 @@ import jquery from 'jquery';
 			//每隔两秒进行一次滚动
 			var timing = setInterval(action, sleep);
 
-			$("ul").hover(
+			$(_this).hover(
 				// 鼠标经过清除滚动
 				function() {
 					clearInterval(timing);

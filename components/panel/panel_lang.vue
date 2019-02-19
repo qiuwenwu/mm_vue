@@ -2,10 +2,10 @@
 	<div class="panel_lang">
 		<el-dropdown @command="set">
 			<div class="el-dropdown-link">
-				<img :src="obj.img" /><span>{{ obj.title }}</span><i class="el-icon-caret-bottom"></i>
+				<img :src="obj.icon" /><span>{{ obj.title }}</span><i class="el-icon-caret-bottom"></i>
 			</div>
 			<el-dropdown-menu class="panel_lang_menu" slot="dropdown">
-				<el-dropdown-item v-for="(o, index) in list" :key="index" :index="o.name" :command="o.name"><img :src="o.img" /><span>{{ o.title }}</span></el-dropdown-item>
+				<el-dropdown-item v-for="(o, index) in list" :key="index" :index="o.name" :command="o.name"><img :src="o.icon" /><span>{{ o.title }}</span></el-dropdown-item>
 			</el-dropdown-menu>
 		</el-dropdown>
 	</div>
@@ -20,12 +20,12 @@
 				list: [{
 						title: "简体中文",
 						name: "chinese",
-						img: "/img/chinese.svg"
+						icon: "/img/chinese.svg"
 					},
 					{
 						title: "English",
 						name: "english",
-						img: "/img/english.svg"
+						icon: "/img/english.svg"
 					}
 				]
 			};

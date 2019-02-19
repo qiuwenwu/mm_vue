@@ -10,6 +10,9 @@ mm.install = function(Vue, options) {
 	Vue.prototype.getApi = $.http.get;
 	Vue.prototype.postApi = $.http.post;
 	Vue.prototype.cookie = $.cookie;
+	Vue.filter('double', function (value) {
+		return parseFloat(value).toFixed(2)
+	})
 };
 
 Vue.mixin(Vue.extend(

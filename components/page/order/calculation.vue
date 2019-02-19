@@ -1,31 +1,23 @@
 <template>
-	<div class="order_product">
+	<div class="order_calculation">
 		<div class="order_list" v-if="list.length > 0">
 			<el-table :data="list">
 				<el-table-column prop="order" label="订单号" width="180"></el-table-column>
 				<el-table-column prop="date" label="下单日期" width="160"></el-table-column>
-				<el-table-column prop="name" label="物品名称" width="160"></el-table-column>
-				<el-table-column prop="count" label="总价" width="130">
+				<el-table-column prop="calculation" label="算力" width="130">
 					<template slot-scope="scope">
-							<el-popover trigger="hover" placement="top">
-							<p class="order_desc">单价 * 数量 = 总价</p>
-							<p>{{ scope.row.price | double }} * {{ scope.row.num }} = {{ (scope.row.price * scope.row.num) | double }}</p>
-							<div slot="reference">
-								<span class="unit">{{ $lang('unit') }}</span>{{ (scope.row.price * scope.row.num) | double }}
-							</div>
-						</el-popover>
+						<span>{{ scope.row.calculation }}</span><span class="unit">TH/S</span>
 					</template>
 				</el-table-column>
-				<el-table-column prop="courier" label="快递单号">
+				<el-table-column prop="day" label="天数" width="160">
 					<template slot-scope="scope">
-						<el-popover trigger="hover" placement="top">
-							<p><span class="order_title">收货地址：</span><span>{{ scope.row.address }}</span></p>
-							<p><span class="order_title">联系电话：</span><span>{{ scope.row.phone }}</span></p>
-							<p><span class="order_title">运输情况：</span><span>{{ scope.row.condition }}</span></p>
-							<div slot="reference">
-								{{ scope.row.courier }}
-							</div>
-						</el-popover>
+						<span>{{ scope.row.day }}</span><span class="unit">{{ $lang('day') }}</span>
+					</template>
+				</el-table-column>
+				<!-- <el-table-column prop="address" label="收货地址" width="300"></el-table-column> -->
+				<el-table-column prop="paid" label="已付金额">
+					<template slot-scope="scope">
+						<span class="unit">{{ $lang('unit') }}</span><span>{{ scope.row.paid | double }}</span>
 					</template>
 				</el-table-column>
 				<el-table-column prop="state" label="订单状态" width="80">
@@ -45,14 +37,14 @@
 			<img src="/img/file.png" />
 			<p><span>{{ $lang('no_data') }}</span></p>
 		</div>
-		<panel_state :list="states" />
+		<panel_state :list="states"/>
 	</div>
 </template>
 
 <script>
 	import panel_state from "~/components/panel/panel_state.vue";
 	import panel_page from "~/components/panel/panel_page.vue";
-
+		
 	export default {
 		components: {
 			panel_state,
@@ -64,50 +56,43 @@
 				list: [{
 					order: "P019C156DEAD",
 					date: "2019-02-18 20:15",
-					name: "Soter硬件钱包",
-					courier: "11000002000006",
-					condition: "2019-02-15 20:15至深圳分公司",
+					calculation: 50,
+					day: 180,
+					paid: 250.00,
 					address: "深圳市 深圳湾科技园",
 					phone: "15817188815",
-					price: 499,
-					num:  1,
 					state: 2
 				},
 				{
 					order: "P019C156DEAD",
 					date: "2019-02-20 16:15",
-					name: "DigBig矿机芯片",
-					courier: "11000002000006",
-					condition: "2019-02-15 20:15至深圳分公司",
+					calculation: 30,
+					day: 360,
+					paid: 188.50,
 					address: "深圳市 深圳湾科技园",
 					phone: "15817188815",
-					price: 580,
-					num: 2,
 					state: 3
 				}
 				],
-				states: [{
+				states:[
+					{
 						id: 0,
 						name: "全部"
 					},
 					{
 						id: 1,
-						name: "待付款"
+						name: "等待中"
 					},
 					{
 						id: 2,
-						name: "待发货"
+						name: "生效中"
 					},
 					{
 						id: 3,
-						name: "已发货"
-					},
-					{
-						id: 4,
 						name: "已完成"
 					},
 					{
-						id: 5,
+						id: 4,
 						name: "已取消"
 					}
 				]

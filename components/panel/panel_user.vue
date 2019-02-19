@@ -19,7 +19,7 @@
 					<router-link to="/signUp">{{ $lang('nav_sign_up') }}</router-link>
 				</li>
 				<li>
-					<router-link to="/signIn">{{  $lang('nav_sign_in') }}</router-link>
+					<router-link to="/signIn">{{ $lang('nav_sign_in') }}</router-link>
 				</li>
 			</ul>
 		</div>
@@ -59,10 +59,12 @@
 		z-index: 2;
 		padding-top: 1.1rem;
 	}
+
 	.nav_user span,
 	.nav_user i {
 		color: #fff;
 	}
+
 	.user_sign a {
 		color: inherit;
 		font-size: 14px;

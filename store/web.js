@@ -31,7 +31,6 @@ export const state = () => ({
 			url: '/home/article?aid=11', // 跳转链接
 			mode: '', // 页面打开方式 0为默认，1为新页面
 			tip: '' // 角标提示
-
 		},
 		{
 			id: 2,
@@ -105,20 +104,20 @@ export const state = () => ({
 		{
 			id: 2,
 			title: '我的订单', // 标题
-			name: 'News', // 名称
-			url: '/home/news_list?cid=2', // 跳转链接
+			name: 'Order', // 名称
+			url: '/user/order', // 跳转链接
 		},
 		{
 			id: 3,
 			title: '个人中心', // 标题
-			name: 'About_us', // 名称
-			url: '/about', // 跳转链接
+			name: 'Info', // 名称
+			url: '/user/info', // 跳转链接
 		},
 		{
 			id: 4,
 			title: '提醒设置', // 标题
-			name: 'News', // 名称
-			url: '/home/news_list?cid=2', // 跳转链接
+			name: 'Setting', // 名称
+			url: '/user/setting', // 跳转链接
 		}
 	],
 	nav_tag: [],

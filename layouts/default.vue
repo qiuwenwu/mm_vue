@@ -43,6 +43,7 @@
 	}
 </script>
 
+
 <style>
 	.main { min-height: calc(100vh - 22rem); overflow: hidden; position: relative; }
 	.main>.form h2 { margin-bottom: 1.5rem; }
@@ -56,7 +57,7 @@
 	
 	.form_tip { position: absolute; top:50%; transform: translateY(-50%); left: 16rem; }
 	.el-input.is-disabled .el-input__inner { color: #333; }
-	
+
 	.page_user .col,.page_user [class*=col-] { padding: .5rem; }
 	.page_user .col>*,.page_user [class*=col-]>* { background: #fff; box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04); border-radius: .25rem; }
 	.page_user .el-tabs__header { margin: 0; }
@@ -68,6 +69,15 @@
 	.page_user article { width: calc(85% - 1rem); float:right; padding: 0.5rem; overflow: hidden; }
 	.page_user .el-collapse-item__header { background: #d5eaff; color: #000; padding-left: 1rem; }
 	.page_user .el-form { max-width: 30rem; padding: 1rem; }
-	
+	.page_user .el-collapse-item__header { height: 2.5rem; line-height: 2.5rem; }
 	.el-collapse-item:last-child .el-collapse-item__wrap{ border-bottom: none; }
+	
+	.page_user .el-tabs__content { overflow: visible; position: relative; min-height: 30rem; }
+	.page_user .panel_state { position: absolute; right: 1rem; top: -2.3rem; }
+	.page_user .data_no { text-align: center; position: absolute; top: 50%;  left: 50%; transform: translate(-50%, -50%); }
+	
+	.state-wrapper { color:#409EFF }
+	
+	.order_list .unit { font-size: 0.75rem; color: #999; }
+	.order_title, .order_desc { color: #999; }
 </style>

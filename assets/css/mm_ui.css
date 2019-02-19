@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* ====== 布局 ====== */
 /* 初始化 */
 *,figure{ padding: 0; margin: 0; }
 li {list-style: none; }
@@ -143,6 +143,17 @@ h6,.h6 {font-size: 0.875rem;}
 .small { font-size: 0.75rem;}
 
 
+/* 常规布局 */
+dt { margin-top: 1rem; margin-bottom: 0.25rem; color: #333; font-weight: 600; }
+dd { padding-left: 2rem; padding-bottom: 1rem;}
+
+/* 常用 */
+.unit { font-style: normal; }
+
+
+
+/* ====== 风格 ====== */
+
 /* 背景 */
 .bg_white { background: white; color: #333; }
 .bg_black { background: #333; color: #999; }
@@ -172,10 +183,11 @@ h4,.h4,
 h5,.h5,
 h6,.h6 { color: #333; }
 
-/* 常规布局 */
-dt { margin-top: 1rem; margin-bottom: 0.25rem; color: #333; font-weight: 600; }
-dd { padding-left: 2rem; padding-bottom: 1rem;}
-
-/* 常用 */
-.unit { font-style: normal; }
-
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f8f8f8+100 */
+.bg {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f8f8f8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f8f8f8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#f8f8f8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f8',GradientType=0 ); /* IE6-9 */
+}
