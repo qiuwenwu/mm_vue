@@ -1,108 +1,75 @@
 <template>
-	<div id="home_news_list" class="main page_home">
-		<div class="warp">
-			<el-breadcrumb separator="/">
-				<el-breadcrumb-item :to="{ path: '/' }">{{ $lang('nav_index') }}</el-breadcrumb-item>
-				<el-breadcrumb-item>{{ $lang('nav_news') }}</el-breadcrumb-item>
-			</el-breadcrumb>
-			<aside>
-					<!-- 热门文章 -->
-				<list_article :label="$lang('news_hot')" display="2" />
-				
-				<!-- 最新文章-->
-				<list_article :label="$lang('news_new')" display="2" />
-			</aside>
-			<article>
-				<!-- 文章列表 -->
-				<list_article :list="list"/>
-			</article>
-		</div>
-	</div>
+	<!-- 新闻列表页 -->
+	<div class="page_home" id="home_news_list">
+		<!-- 页主体 -->
+		<mm_bodyer>
+			<!-- 外套 -->
+			<mm_warp>
+				<!-- 栅格 -->
+				<mm_grid col="1" class="space-x">
+					<!-- 格子 -->
+					<mm_col>
+						<!-- 文章列表 -->
+						<mm_block>
+							<mm_body class="rl">
+								<mm_list_news :list="list" class="big"></mm_list_news>
+							</mm_body>
+						</mm_block>
+					</mm_col>
+				</mm_grid>
+			</mm_warp>
+		</mm_bodyer>
+		<!-- 新闻筛选面板 -->
+
+		<!-- 新闻排序条件 -->
+
+		<!-- 新闻列表 -->
+
+	</div><!-- /view -->
 </template>
 
 <script>
-	import list_article from '~/components/list/list_article';
-	
+	import mixin from '@/mixins/page'
+
 	export default {
-		components: {
-			list_article
-		},
+		mixins: [mixin],
+		components: {},
 		data() {
 			return {
-				channel: this.$store.state.channel,
-				articles_hot: [],
-				articles_new: [],
-				list: [{
-						aid: 1,
-						title: "测试新闻标题列表",
-						img: "/upload/article1.png",
-						desc: "这里显示摘要信息",
-						time: "2019-01-26 17:20"
-					},
-					{
-						aid: 2,
-						title: "测试",
-						img: "/upload/article1.png",
-						desc: "这里显示摘要信息，网站测试",
-						time: "2019-01-26 10:20"
-					},
-					{
-						aid: 3,
-						title: "测试",
-						img: "/upload/article1.png",
-						desc: "这里显示摘要信息，网站测试",
-						time: "2019-01-26 10:20"
-					}
-				]
+				oauth: true,
+				url_get_list: "~/paper/grouping/paper",
+				query: {
+					index: 0,
+					size: 10,
+					grouping: "新闻"
+				},
+				vm: {
+					title: "title",
+					desc: "description",
+					createTime: "time",
+					icon: "icon",
+					url: "url"
+				}
 			}
 		},
-		computed: {
-			channel_name() {
-				var name = "";
-				var cid = this.$route.query.cid;
-				var list = this.channel;
-
-				for (var i = 0; i < list.length; i++) {
-					var o = list[i];
-					if (o.cid == cid) {
-						name = o.name;
-						break;
+		methods: {
+			get_list_after(json, status) {
+				if (json) {
+					var lt = json.content;
+					if (lt) {
+						this.list.clear();
+						for (var i = 0; i < lt.length; i++) {
+							var o = lt[i];
+							o.url = '/pages/home/news_view?id=' + o.id;
+							this.list.push(o);
+						}
+						this.list.sortBy('desc', 'display');
 					}
 				}
-				return name;
 			}
 		}
 	}
 </script>
 
 <style>
-		#home_news_list aside {
-		float: right;
-		width: 25%;
-	}
-	
-	#home_news_list article { 
-		margin-bottom: 1.5rem;
-	}
-		
-	#home_news_list aside ~ article {
-		float: float;
-		width: calc(75% - 1rem);
-	}
-	
-	#home_news_list .banner {
-		overflow: hidden;
-		margin-bottom: 1rem;
-		background: #fff;
-		border: 1px solid #e5e5e5;
-		border-radius: .5rem;
-	}
-
-	#home_news_list .banner img {
-		width: 100%;
-	}
-
-	#home_news_list h3 {
-		color: #000;
-	}
 </style>

@@ -1,72 +1,71 @@
-const pkg = require('./package')
-
 module.exports = {
   mode: 'spa',
-
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: pkg.name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+    title: process.env.npm_package_name || '',
+    meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }]
   },
-
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: '#fff'
+  },
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
-    'element-ui/lib/theme-chalk/index.css',
-		'~assets/css/font-awesome.min.css',
-		'~assets/css/mm_ui.css'
+    '~/assets/css/font-awesome.min',
+    '~/assets/css/mm_layout',
+    '~/assets/css/mm_component',
+    '~/assets/css/mm_theme',
   ],
-
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
-    '@/plugins/element-ui',
-		'@/plugins/mm_sdk',
-		'@/plugins/mm_ui',
-		'@/plugins/commom'
-		],
-
+    '~/plugins/mm_vue',
+    '~/plugins/mm_ui',
+    '~/plugins/mm_component'
+  ],
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
   /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
-
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {},
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
-    transpile: [/^element-ui/],
-    
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-      
-    }
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
   }
 }
