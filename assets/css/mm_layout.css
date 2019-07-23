@@ -259,6 +259,26 @@ small>.mm_title, .font_small>.mm_title { height: 2rem; line-height: 1.75rem; }
 .mm_group>*,[class*=mm_group_]>* { flex: 1; float:left; border-radius: 0; white-space: nowrap; }
 .mm_group>.mm_input, .mm_group>input { flex: auto; height: 2.75rem; line-height: 2.75rem; }
 
+
+/*== 媒体 ==*/
+/* 图片尺寸 */
+.mm_icon { width: 100%; position:relative;display: block; }
+.mini .mm_icon, .img_1 .mm_icon{ width:1.25rem; height:1.25rem; text-align: center; }
+.small .mm_icon, .img_2 .mm_icon{width:1.875rem;height:1.875rem;}
+.big .mm_icon, .img_3 .mm_icon{width:2.625rem;height:2.625rem;}
+.larger .mm_icon, .img_4 .mm_icon{width:4rem;height:4rem;}
+.jumbo .mm_icon, .img_5 .mm_icon{width:8rem;height:8rem;}
+.mm_icon .icon { text-align: center; }
+.mm_icon img, .mm_icon image{ width:100%; height: inherit; }
+.full .mm_icon { display: inline-block; width: 1rem; height: 1rem; }
+
+/* 图标字体尺寸 */
+.mini .icon{ width: 1.5rem; height: 1.5rem; border-radius: .25rem; line-height: 1.5rem; font-size: .85rem; }
+.small .icon{ width:2rem; height:2rem; line-height: 2rem; font-size: 0.875rem; }
+.big .icon{ width: 3rem; height: 3rem; line-height: 3rem; font-size: 1rem; }
+.larger .icon{ width: 4rem; height: 4rem; line-height: 4rem; font-size: 1.5rem; }
+.jumbo .icon{ width: 8rem; height: 8rem; line-height: 8rem; font-size: 3rem; }
+
 /* == 适配环境 == */
 @media (min-width: 415px) {
   html {font-size:16px !important;}
